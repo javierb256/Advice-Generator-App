@@ -1,10 +1,13 @@
+import dice from "../assets/icon-dice.svg";
+
 function Main(){
    return (
-   <>
-   <p>Advice #000</p>
+   <div className="advice-container">
+   <p>ADVICE #000</p>
    <h1>Advice</h1>
-   <button></button>
-   </>
+   <hr />
+   <button><img src={dice} /></button>
+   </div>
    );
 }
 
