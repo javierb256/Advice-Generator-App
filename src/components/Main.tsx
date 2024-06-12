@@ -1,37 +1,33 @@
 import dice from "../assets/icon-dice.svg";
 import { useState, useEffect} from "react";
+import axios from "axios";
 
 function Main(){
-   const [advice, setAdvice] = useState([]);
-   const [id, setId] = useState([]);
-   let count = 0;
+   const [advice, setAdvice] = useState(null);
+   const [id, setId] = useState(null);
 
-   
+   //initial advice on page mount
    useEffect(() => {
-      makeApiCall();
+      axios.get("https://api.adviceslip.com/advice").then((response) => {
+            setAdvice(response.data.slip.advice);
+            setId(response.data.slip.advice)
+      })
    }, [])
+
+   //get new advice from api call
    const makeApiCall = () => {
-      fetch("https://api.adviceslip.com/advice")
-      .then((response) => response.json())
-      .then((data) => {
-         console.log(data.slip.advice)
-         setAdvice(data.slip.advice);
-         setId(data.slip.id)
-         count +1
-         console.log(count)
-      })
-      .catch((err) => {
-         console.log(err.message)
-      })
+      axios.get("https://api.adviceslip.com/advice").then((response) => {
+         setAdvice(response.data.slip.advice);
+         setId(response.data.slip.advice)
+   })
    }
 
    return (
    <div className="advice-container">
    <p>ADVICE #{id}</p>
-   <h1>"{advice}"</h1>
-   <p>{count}</p>
+   <h1>"{advice}"</h1> 
    <hr />
-   <button onClick={makeApiCall} ><img src={dice} /></button>
+   <button onClick={makeApiCall}><img src={dice} /></button>
    </div>
    );
 }
