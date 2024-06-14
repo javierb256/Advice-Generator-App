@@ -50,6 +50,10 @@
     --gray-blue: hsl(218, 23%, 16%);
 }
 
+#root {
+  width: 100%;
+}
+
 body {
   background-color: var(--gray-blue);
   display: flex;
@@ -72,7 +76,8 @@ body {
    */
 
 .advice-container {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   min-height: 300px;
   background-color: var(--grayish-blue);
   margin: 0 auto;
@@ -125,10 +130,13 @@ body {
 footer {
   position: absolute;
   bottom: 0;
-  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%,0);
   text-align: center;
 }
 
-@media screen and (max-width: 570px){
-  
+@media screen and (max-width: 520px){
+  .advice-container{
+    width: 90%;
+  }
 }
