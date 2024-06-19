@@ -1,9 +1,4 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
 * {
@@ -68,13 +63,6 @@ body {
 
 }
 
-/* .manrope-<uniquifier> {
-    font-family: "Manrope", sans-serif;
-    
-    font-weight: 800;
-  }
-   */
-
 .advice-container {
   width: 100%;
   max-width: 500px;
@@ -133,10 +121,29 @@ footer {
   left: 50%;
   transform: translate(-50%,0);
   text-align: center;
+  color: white;
 }
 
 @media screen and (max-width: 520px){
   .advice-container{
     width: 90%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .divider img {
+    width: 100%;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .advice-container {
+    margin-top: 2rem;
+  }
+
+  footer {
+    position: relative;
+    margin-top: 5rem;
   }
 }

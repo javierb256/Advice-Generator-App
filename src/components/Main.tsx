@@ -29,7 +29,7 @@ function Main(){
    <p>ADVICE #{id}</p>
    <h1>"{advice}"</h1> 
    <div className="divider">
-      <div><img src={divider} alt="two divider columns" /></div>
+      <img src={divider} alt="two divider columns" />
    </div>
    <button onClick={makeApiCall}><img src={dice} /></button>
    </div>
