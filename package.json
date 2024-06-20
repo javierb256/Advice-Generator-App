@@ -2,11 +2,11 @@
   "name": "advice-generator-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://javierb256.github.io/Advice-Generator-App",
+  "homepage": "https://javierb256.github.io/Advice-Generator-App/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
