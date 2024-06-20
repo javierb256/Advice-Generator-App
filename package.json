@@ -2,7 +2,7 @@
   "name": "advice-generator-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://javierb256.github.io/Advice-Generator-App/",
+  "homepage": "https://javierb256.github.io/Advice-Generator-App",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
